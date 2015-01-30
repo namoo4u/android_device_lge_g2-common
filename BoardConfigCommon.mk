@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# Custom kernel toolchain
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := linaro-4.10
+
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
