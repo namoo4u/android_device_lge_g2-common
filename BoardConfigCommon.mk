@@ -14,7 +14,9 @@
 # limitations under the License.
 #
 
-# Custom kernel toolchain
+# Super Optimizations
+LIQUIFY := true
+TARGET_GCC_VERSION_EXP := 4.8-sm
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.10-linaro/bin/"
 
@@ -28,7 +30,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-# Krait optimizations
+# Krait Optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
 TARGET_KRAIT_BIONIC_PLDOFFS := 10
@@ -39,7 +41,7 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
 
-# Kernel information
+# Kernel Information
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g2 user_debug=31 msm_rtb.filter=0x0
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x05000000 --tags_offset 0x04800000
@@ -120,8 +122,8 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 BOARD_HARDWARE_CLASS := device/lge/g2-common/cmhw/
 
-# SELinux policies
-# qcom sepolicy
+# SELinux Policies
+# QCOM sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
